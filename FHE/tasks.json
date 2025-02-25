@@ -1,0 +1,24 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build SEAL Program",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++17",
+                "-I", "/Users/brandonangell/SEAL/native/src", 
+                "-I", "/Users/brandonangell/GSL/include", // Add GSL include path
+                "-L", "/Users/brandonangell/SEAL/lib",
+                "-lseal",
+                "/Users/brandonangell/FHE/fhe.cpp",
+                "-o", "/Users/brandonangell/FHE/fhe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
+
